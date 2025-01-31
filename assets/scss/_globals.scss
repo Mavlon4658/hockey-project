@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+// Fonts
+$font-bebas: "Bebas Neue", serif;
+$font-inter: "Inter Tight", serif;
+$font-oswald: "Oswald", serif;
+// Fonts end
+
+// Colors
+$color-1: #1882FC;
+$color-2: #EBF1F9;
+$color-3: #AEAFB4;
+$color-4: #74757B;
+$color-bg: #1B1B1D;
+$color-5: #151517;
+// Colors end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
