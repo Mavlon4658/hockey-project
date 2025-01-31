@@ -20,20 +20,42 @@ body {
 
 // Home
 .home {
+    &-container {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
     &-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        
         &__card {
+            gap: 20px;
             background: $color-bg;
             border-radius: 14px;
             padding: 16px 43px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 100%;
+            width: 49%;
+        }
 
+        p {
+
+        }
+
+        h5 {
+            font-size: 16px;
+            font-weight: 600;
+            font-family: $font-inter;
+            color: $color-3;
+
+            &:last-child {
+                text-align: right;
+            }
         }
     }
 }
