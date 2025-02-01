@@ -838,6 +838,9 @@ body {
     flex-direction: column;
     gap: 14px;
   }
+  .schedule-list__item:last-child li:last-child {
+    width: 100%;
+  }
 }
 .schedule-list__item h3 {
   font-size: 39px;
@@ -1031,6 +1034,18 @@ body {
     font-size: 12px;
   }
 }
+.participate-card:hover .main-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background: rgba(21, 21, 23, 0.7);
+  border-radius: 30px;
+  border: 1px solid #1882FC;
+  z-index: 2;
+}
 .participate-card:hover p {
   display: block;
 }
@@ -1198,6 +1213,27 @@ body {
   .stage-body li {
     padding: 0 0 0 43px;
   }
+  .stage-body li:nth-child(1) {
+    order: 1;
+  }
+  .stage-body li:nth-child(2) {
+    order: 2;
+  }
+  .stage-body li:nth-child(3) {
+    order: 3;
+  }
+  .stage-body li:nth-child(4) {
+    order: 4;
+  }
+  .stage-body li:nth-child(5) {
+    order: 7;
+  }
+  .stage-body li:nth-child(6) {
+    order: 6;
+  }
+  .stage-body li:nth-child(7) {
+    order: 5;
+  }
 }
 .stage-body li::before {
   content: "";
@@ -1215,6 +1251,9 @@ body {
   }
 }
 @media screen and (min-width: 993px) {
+  .stage-body li br {
+    display: none;
+  }
   .stage-body li:nth-child(4n)::before {
     width: 100%;
   }

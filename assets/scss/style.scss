@@ -823,6 +823,12 @@ body {
             @include media(993) {
                 flex-direction: column;
                 gap: 14px;
+
+                &:last-child {
+                    li:last-child {
+                        width: 100%;
+                    }
+                }
             }
 
             h3 {
@@ -1032,6 +1038,21 @@ body {
         }
 
         &:hover {
+            .main-img {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: calc(100% - 2px);
+                    height: calc(100% - 2px);
+                    background: rgba(21, 21, 23, 0.7);
+                    border-radius: 30px;
+                    border: 1px solid $color-1;
+                    z-index: 2;
+                }
+            }
+
             p {
                 display: block;
             }
@@ -1201,6 +1222,34 @@ body {
 
             @include media(993) {
                 padding: 0 0 0 43px;
+
+                &:nth-child(1) {
+                    order: 1;
+                }
+
+                &:nth-child(2) {
+                    order: 2;
+                }
+
+                &:nth-child(3) {
+                    order: 3;
+                }
+
+                &:nth-child(4) {
+                    order: 4;
+                }
+
+                &:nth-child(5) {
+                    order: 7;
+                }
+
+                &:nth-child(6) {
+                    order: 6;
+                }
+
+                &:nth-child(7) {
+                    order: 5;
+                }
             }
 
             &::before {
@@ -1219,6 +1268,10 @@ body {
             }
 
             @include media(-993) {
+                br {
+                    display: none;
+                }
+
                 &:nth-child(4n) {
                     &::before {
                         width: 100%;
