@@ -607,7 +607,7 @@ body {
 }
 @media screen and (max-width: 993px) {
   .schedule-bg {
-    height: 376px;
+    height: 786px;
   }
 }
 .schedule-bg img {
@@ -840,6 +840,30 @@ body {
   }
   .schedule-list__item:last-child li:last-child {
     width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .schedule-list__item:nth-child(1) ul {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .schedule-list__item:nth-child(1) li {
+    width: calc(50% - 10px) !important;
+  }
+  .schedule-list__item:nth-child(1) li:nth-child(1) {
+    order: 1;
+  }
+  .schedule-list__item:nth-child(1) li:nth-child(2) {
+    order: 2;
+  }
+  .schedule-list__item:nth-child(1) li:nth-child(3) {
+    order: 5;
+  }
+  .schedule-list__item:nth-child(1) li:nth-child(4) {
+    order: 3;
+  }
+  .schedule-list__item:nth-child(1) li:nth-child(5) {
+    order: 4;
   }
 }
 .schedule-list__item h3 {
