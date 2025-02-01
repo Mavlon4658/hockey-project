@@ -1,23 +1,19 @@
-const bodyHidden = () => {
-  document.querySelector('body').style.overflow = 'hidden';
-}
-
-const bodyVisible = () => {
-  document.querySelector('body').style.overflow = 'visible';
-}
-
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileMenuBg = document.querySelector('.mobile-menu__bg');
 const bars = document.querySelector('.header .bars');
+const mobileMenuClose = document.querySelector('.mobile-menu__close');
 
 bars.onclick = () => {
-  bodyHidden();
-  mobileMenu.classList.toggle('active');
-  bars.classList.toggle('active');
+  mobileMenu.classList.add('active');
+  bars.classList.add('active');
 }
 
 mobileMenuBg.onclick = () => {
-  bodyHidden();
+  mobileMenu.classList.remove('active');
+  bars.classList.remove('active');
+}
+
+mobileMenuClose.onclick = () => {
   mobileMenu.classList.remove('active');
   bars.classList.remove('active');
 }
