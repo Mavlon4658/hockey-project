@@ -405,7 +405,10 @@ body {
             font-weight: 400;
             line-height: 120%;
             color: #EBF1F9;
-            text-transform: uppercase;
+
+            span {
+                text-transform: uppercase;
+            }
 
             @include media(993) {
                 flex-direction: column;
@@ -1070,7 +1073,7 @@ body {
             }
         }
 
-        &:hover {
+        &.active {
             .main-img {
                 &::before {
                     content: "";
@@ -1855,6 +1858,11 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 387px;
+
+        @include media(993) {
+            width: 100%;
+        }
 
         span {
             font-family: $font-inter;
@@ -2187,7 +2195,7 @@ body {
         background: $color-5;
         padding: 40px;
         display: flex;
-        align-items: start;
+        align-items: center;
         justify-content: space-between;
         gap: 20px;
 
@@ -2203,27 +2211,29 @@ body {
     }
 
     .logo {
-        width: 90px;
+        width: 120px;
         flex-shrink: 0;
 
         img {
             width: 100%;
         }
 
-        @include media(993) {
-            width: 65px;
+        @include media(576) {
+            width: 150px;
         }
     }
 
     &_left {
         display: flex;
-        align-items: start;
-        gap: 73px;
+        align-items: center;
+        gap: 30px;
 
         @include media(993) {
-            gap: 85px;
-            justify-content: space-between;
+            gap: 20px;
             width: 100%;
+            align-items: center;
+            text-align: right;
+            justify-content: space-between;
         }
     }
 
@@ -2247,19 +2257,24 @@ body {
     }
 
     &_center {
-        display: flex;
-        align-items: start;
-        gap: 75px;
+        font-size: 16px;
+        font-family: $font-inter;
+        font-weight: 400;
+        width: 30%;
 
         @include media(993) {
+            width: 60%;
+            text-align: center;
+        }
+
+        @include media(576) {
             width: 100%;
-            gap: 42px;
-            justify-content: space-between;
         }
     }
 
     .btn-blue {
         padding: 18px 45px;
+        flex-shrink: 0;
 
         @include media(993) {
             padding: 11px;

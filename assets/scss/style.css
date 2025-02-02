@@ -433,6 +433,8 @@ body {
   font-weight: 400;
   line-height: 120%;
   color: #EBF1F9;
+}
+.home-text ul span {
   text-transform: uppercase;
 }
 @media screen and (max-width: 993px) {
@@ -1058,7 +1060,7 @@ body {
     font-size: 12px;
   }
 }
-.participate-card:hover .main-img::before {
+.participate-card.active .main-img::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1070,7 +1072,7 @@ body {
   border: 1px solid #1882FC;
   z-index: 2;
 }
-.participate-card:hover p {
+.participate-card.active p {
   display: block;
 }
 .participate-body {
@@ -1802,6 +1804,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 387px;
+}
+@media screen and (max-width: 993px) {
+  .award_title_block {
+    width: 100%;
+  }
 }
 .award_title_block span {
   font-family: "Inter Tight", serif;
@@ -2121,7 +2129,7 @@ body {
   background: #151517;
   padding: 40px;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
@@ -2138,27 +2146,29 @@ body {
   }
 }
 .footer .logo {
-  width: 90px;
+  width: 120px;
   flex-shrink: 0;
 }
 .footer .logo img {
   width: 100%;
 }
-@media screen and (max-width: 993px) {
+@media screen and (max-width: 576px) {
   .footer .logo {
-    width: 65px;
+    width: 150px;
   }
 }
 .footer_left {
   display: flex;
-  align-items: start;
-  gap: 73px;
+  align-items: center;
+  gap: 30px;
 }
 @media screen and (max-width: 993px) {
   .footer_left {
-    gap: 85px;
-    justify-content: space-between;
+    gap: 20px;
     width: 100%;
+    align-items: center;
+    text-align: right;
+    justify-content: space-between;
   }
 }
 .footer_link {
@@ -2178,19 +2188,25 @@ body {
   opacity: 0.7;
 }
 .footer_center {
-  display: flex;
-  align-items: start;
-  gap: 75px;
+  font-size: 16px;
+  font-family: "Inter Tight", serif;
+  font-weight: 400;
+  width: 30%;
 }
 @media screen and (max-width: 993px) {
   .footer_center {
+    width: 60%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer_center {
     width: 100%;
-    gap: 42px;
-    justify-content: space-between;
   }
 }
 .footer .btn-blue {
   padding: 18px 45px;
+  flex-shrink: 0;
 }
 @media screen and (max-width: 993px) {
   .footer .btn-blue {

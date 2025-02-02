@@ -23,6 +23,11 @@ var partnerslider = new Swiper(".partnerSwiper", {
   spaceBetween: 15,
   centeredSlides: true,
   initialSlide: 1,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     768: {
       slidesPerView: 2.8,
